@@ -1,4 +1,4 @@
-ConsoleProxy is a quick and dirty solution to the problem of accommodating multiple console applications into a single Visual Studio solution.
+ConsoleProxy is a quick and dirty solution to the problem of accommodating multiple console applications into a single Visual Studio project/solution.
 
 It may occasionally prove useful as a little harness in which to build multiple little 'test/play/throwaway' applications inside Visual Studio without the overhead of having to create a new project for each new idea.
 This is particularly convenient if you add the location of the ConsoleProxy binary to your path environment variable, allowing you to play/build/run little console apps with the minimum of fuss.
