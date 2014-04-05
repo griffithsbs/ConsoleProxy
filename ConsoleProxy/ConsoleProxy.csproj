@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TemplateMethodsExample\CabDriver.cs" />
+    <Compile Include="TemplateMethodsExample\Fireman.cs" />
+    <Compile Include="TemplateMethodsExample\Person.cs" />
+    <Compile Include="TemplateMethodsExample\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
