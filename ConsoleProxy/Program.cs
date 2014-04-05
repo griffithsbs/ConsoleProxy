@@ -58,7 +58,16 @@ namespace ConsoleProxy {
                     Console.WriteLine("Error. More than one public static method found with the name {0}._Main", typeName);
                 }
                 catch (NullReferenceException) {
-                    Console.WriteLine("No public static method with the name _Main found on the type {0}", typeName);
+                    Console.WriteLine("Error. No public static method with the name _Main found on the type {0}", typeName);
+                }
+                catch (TargetInvocationException e) {
+                    // all _Main methods should require a single string[] argument to be passed in
+                    Console.WriteLine("Error. Invalid arguments to {0}._Main", typeName);
+                    if(e.InnerException != null) {
+                        // relay the message from an exception thrown by the invoked method to the user
+                        Console.WriteLine(e.InnerException.Message);
+                    }
+                    
                 }
             }
 
