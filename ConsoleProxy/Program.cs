@@ -63,13 +63,11 @@ namespace ConsoleProxy {
                 catch (TargetInvocationException e) {
                     if (e.InnerException != null) {
                         // relay the message from an exception thrown by the invoked method to the user
-                        // all _Main methods should require a single string[] argument to be passed in
                         Console.WriteLine("Error. Exception thrown by {0}._Main:", typeName);
                         Console.WriteLine(e.InnerException.Message);
                         Console.WriteLine(e.InnerException.StackTrace);
                     }
                     else {
-                        // all _Main methods should require a single string[] argument to be passed in
                         Console.WriteLine("Error. Failed to invoke {0}._Main:", typeName);
                     }
                 }
